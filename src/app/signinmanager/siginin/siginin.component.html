@@ -1,0 +1,28 @@
+<div class="max-height d-flex align-items-center justify-content-center bg-light">
+    <div class="mycard p-5 form-container">
+      <h5 class="display-4 text-center p-2">Sign in</h5>
+      <div class="alert alert-danger" role="alert">
+          <strong>Invalid Email or password</strong>
+        </div>
+      <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="email">Email address*</label>
+          <input type="email" class="form-control" id="email" aria-describedby="email"  formControlName="email">
+          <a class="btn btn-sm btn-link p-0 make-pointer" routerLink="/resetpassword">Forgot Password?</a>
+  
+        </div>
+        <div class="form-group">
+          <label for="passwrd">Password*</label>
+          <input type="password" class="form-control" id="passwrd" formControlName="passwrd">
+        </div>
+        <div class="d-flex justify-content-between py-2">
+          <a class="btn btn-link pl-0" routerLink="/signup">Create account</a>
+          <button type="submit" class="btn btn-success"  routerLink="/user">Signin</button>
+  
+        </div>
+  
+      </form>
+    </div>
+  
+  </div>
+  

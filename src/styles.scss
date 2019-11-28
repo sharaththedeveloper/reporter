@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+.max-height{
+    height:100vh;
+}
+.mycard{
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0.1rem 0.3rem, rgba(0, 0, 0, 0.05) 0px 0.1rem 0.2rem, rgba(0, 0, 0, 0.05) 0px 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+}
+.form-container{
+    width:40%;
+}
+.make-pointer{
+    cursor: pointer;
+}
+.icon {
+    font-size: 1.5rem;
+}
+.fab{
+    height: 3em;
+    width: 3rem;
+    border-radius: 50%;
+    float: right;
+}
+
+@media screen and (max-width: 768px) {
+    .form-container{
+        width:90%;
+    }
+
+}

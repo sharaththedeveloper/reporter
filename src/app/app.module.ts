@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NavComponent } from './user/nav/nav.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { NavComponent } from './user/nav/nav.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BsDatepickerModule.forRoot(),
+    BrowserAnimationsModule,
     // NgbModule
   ],
   providers: [],

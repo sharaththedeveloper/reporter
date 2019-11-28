@@ -1,0 +1,46 @@
+<div class="mycard p-4">
+  <div>
+    <h1 class="display-4">New Team<span><button class="btn btn-success float-right my-3" routerLink='/user'><i class="fas fa-home"></i> Home</button></span></h1>
+  </div>
+  <div>
+    <!-- <form> -->
+
+    <div class="form-group">
+      <label for="inputAddress">Team Name*</label>
+      <input type="text" class="form-control" id="inputAddress">
+    </div>
+    <div class="form-group">
+      <label for="inputAddress2">Team Description</label>
+      <input type="text" class="form-control" id="inputAddress2">
+    </div>
+    <label for="inputAddress2">Memebers</label>
+    <div class="form-group form-inline">
+
+
+      <input type="text" class="form-control" id="inputAddress2">
+      <button type="submit" class="btn btn-success ml-3" (click)="addtoteam()">Add to team</button>
+
+    </div>
+    <label for="inputAddress2">This Team</label>
+    <div class="card mb-3">
+      <div class="card-body">
+        <span *ngFor="let member of team">
+          <div class="badge badge-pill badge-success py-2 px-4 m-1">{{ member}}
+               <span class="make-pointer times ml-1"(click)="removefromteam(member)"><i
+                class="fas fa-times"></i></span></div>
+        </span>
+
+      </div>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-success mb-">Create Project</button>
+    <!-- </form> -->
+
+
+
+
+
+  </div>
+</div>

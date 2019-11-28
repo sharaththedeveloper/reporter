@@ -12,7 +12,9 @@ const routes: Routes = [
   { path: 'user', component:UserComponent ,children:[
     { path: '', loadChildren: () => import('./user/home/home.module').then(m => m.HomeModule) },
     { path: 'newproject', loadChildren: () => import('./user/newproject/newproject.module').then(m => m.NewprojectModule) },
+    { path: 'newteam', loadChildren: () => import('./user/newteam/newteam.module').then(m => m.NewteamModule) },
   ]},
+  
   
   
   

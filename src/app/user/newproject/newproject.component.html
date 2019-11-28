@@ -1,6 +1,6 @@
-<div>
-        <div>
-              <h1 class="display-4">New Project<span><button class="btn btn-success float-right my-3" routerLink='/user'><i class="fas fa-list-alt"></i> Project List</button></span></h1>
+<div class="mycard p-4">
+        <div >
+              <h1 class="display-4">New Project<span><button class="btn btn-success float-right my-3" routerLink='/user'><i class="fas fa-home"></i> Home</button></span></h1>
         </div>
         <div>
                 <form>
@@ -14,124 +14,30 @@
                           <input type="text" class="form-control" id="inputAddress2">
                         </div>
                         <div class="form-row">
-                        <div class="form-group col-6">
-                                <label for="inputAddress2 ">Project Duration</label>
-                                <div class="form-inline">
-                                        <div class="form-group hidden">
-                                            
-                                                <div class="input-group">
-                                                        
-                                                  <input name="datepicker"
-                                                         class="form-control"
-                                                         ngbDatepicker
-                                                         #datepicker="ngbDatepicker"
-                                                         [autoClose]="'outside'"
-                                                         (dateSelect)="onDateSelection($event)"
-                                                         [displayMonths]="2"
-                                                         [dayTemplate]="t"
-                                                         outsideDays="hidden"
-                                                         [startDate]="fromDate">
-                                                  <ng-template #t let-date let-focused="focused">
-                                                    <span class="custom-day"
-                                                          [class.focused]="focused"
-                                                          [class.range]="isRange(date)"
-                                                          [class.faded]="isHovered(date) || isInside(date)"
-                                                          (mouseenter)="hoveredDate = date"
-                                                          (mouseleave)="hoveredDate = null">
-                                                      {{ date.day }}
-                                                    </span>
-                                                  </ng-template>
-                                                </div>
-                                              </div>
-                                              <div class="form-group">
-                                                  
-                                                <div class="input-group">
-                                                        
-                                                  <input #dpFromDate
-                                                         class="form-control" placeholder="yyyy-mm-dd"
-                                                         name="dpFromDate"
-                                                         [value]="formatter.format(fromDate)"
-                                                         (input)="fromDate = validateInput(fromDate, dpFromDate.value)">
-                                                  <div class="input-group-append">
-                                                    <button class="btn btn-success calendar" (click)="datepicker.toggle()" type="button"><i class="fas fa-calendar-alt"></i></button>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                              <div class="form-group ml-2">
-                                                <div class="input-group">
-                                                  <input #dpToDate
-                                                         class="form-control" placeholder="yyyy-mm-dd"
-                                                         name="dpToDate"
-                                                         [value]="formatter.format(toDate)"
-                                                         (input)="toDate = validateInput(toDate, dpToDate.value)">
-                                                  <div class="input-group-append">
-                                                    <button class="btn btn-success calendar" (click)="datepicker.toggle()" type="button"><i class="fas fa-calendar-alt"></i></button>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                </div>
-                            </div>
-                            <div class="form-group col-6">
-                                    <label for="inputCity">City</label>
-                                    <input type="text" class="form-control" id="inputCity">
-                            </div>
+         
+                            <div class="col-xs-12 col-12 col-md-6 form-group">
+                                    <label for="inputAddress2">Project Duration*</label>
+                                    <input type="text"
+                                           placeholder="Start Date - End Date [YYYY-MM-DD]"
+                                           class="form-control"
+                                           bsDaterangepicker
+                                           [bsConfig]="{  isAnimated: true , rangeInputFormat: 'YYYY-MM-DD' }">
+                                  </div>
+                            <div class="col-xs-12 col-12 col-md-6 form-group">
+                                    <label for="inputAddress2">Team</label>
+                                    <select id="inputState" class="form-control">
+                                            <option selected>Choose...</option>
+                                            <option>...</option>
+                                          </select>
+                                  </div>
+                                
 
                         </div>
                       
                         <button type="submit" class="btn btn-success">Create Project</button>
                       </form>
               
-                        <!-- <div class="form-inline">
-                                <div class="form-group hidden">
-                                        <div class="input-group">
-                                          <input name="datepicker"
-                                                 class="form-control"
-                                                 ngbDatepicker
-                                                 #datepicker="ngbDatepicker"
-                                                 [autoClose]="'outside'"
-                                                 (dateSelect)="onDateSelection($event)"
-                                                 [displayMonths]="2"
-                                                 [dayTemplate]="t"
-                                                 outsideDays="hidden"
-                                                 [startDate]="fromDate">
-                                          <ng-template #t let-date let-focused="focused">
-                                            <span class="custom-day"
-                                                  [class.focused]="focused"
-                                                  [class.range]="isRange(date)"
-                                                  [class.faded]="isHovered(date) || isInside(date)"
-                                                  (mouseenter)="hoveredDate = date"
-                                                  (mouseleave)="hoveredDate = null">
-                                              {{ date.day }}
-                                            </span>
-                                          </ng-template>
-                                        </div>
-                                      </div>
-                                      <div class="form-group">
-                                        <div class="input-group">
-                                          <input #dpFromDate
-                                                 class="form-control" placeholder="yyyy-mm-dd"
-                                                 name="dpFromDate"
-                                                 [value]="formatter.format(fromDate)"
-                                                 (input)="fromDate = validateInput(fromDate, dpFromDate.value)">
-                                          <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"></button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="form-group ml-2">
-                                        <div class="input-group">
-                                          <input #dpToDate
-                                                 class="form-control" placeholder="yyyy-mm-dd"
-                                                 name="dpToDate"
-                                                 [value]="formatter.format(toDate)"
-                                                 (input)="toDate = validateInput(toDate, dpToDate.value)">
-                                          <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"></button>
-                                          </div>
-                                        </div>
-                                      </div>
-                        </div> -->
-                                
+                  
                               
                     
 

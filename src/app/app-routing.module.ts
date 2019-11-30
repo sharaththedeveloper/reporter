@@ -13,7 +13,13 @@ const routes: Routes = [
     { path: '', loadChildren: () => import('./user/home/home.module').then(m => m.HomeModule) },
     { path: 'newproject', loadChildren: () => import('./user/newproject/newproject.module').then(m => m.NewprojectModule) },
     { path: 'newteam', loadChildren: () => import('./user/newteam/newteam.module').then(m => m.NewteamModule) },
+    { path: 'people', loadChildren: () => import('./user/people/people.module').then(m => m.PeopleModule) },
+    { path: 'settings', loadChildren: () => import('./user/settings/settings.module').then(m => m.SettingsModule) },
+    { path: 'dashboard', loadChildren: () => import('./user/dashboard/dashboard.module').then(m => m.DashboardModule) },
   ]},
+  
+  
+  
   
   
   

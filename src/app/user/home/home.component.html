@@ -1,9 +1,64 @@
-<div>
+<div class="master container-fluid p-3">
+            <h1 class="display-4 m-2">Home</h1>
+            <hr>
       <div class="mycard p-4 mb-2">
             <h1 class="display-4">Projects<span><button class="btn btn-success float-right my-3" routerLink='/user/newproject'><i class="fas fa-folder-plus"></i> New</button></span></h1>
+            <hr>
+            <div class="project d-flex my-3">
+                  <h3 class="flex-fill">Project 1</h3>
+                  <button class="btn fab btn-success" routerLink="/user/dashboard"><i><i class="fas fa-arrow-right" ></i></i></button>
+            </div>
+            <div class="project d-flex my-3">
+                  <h3 class="flex-fill">Project 2</h3>
+                  <button class="btn fab btn-success" routerLink="/user/dashboard"><i><i class="fas fa-arrow-right"></i></i></button>
+            </div>
+           
       </div>
       <div class="mycard p-4 mb-2">
-            <h1 class="display-4">Teams<span><button class="btn btn-success float-right my-3" routerLink='/user/newteam'><i class="fas fa-folder-plus"></i> New</button></span></h1>
+            <h1 class="display-4">Teams<span><button class="btn btn-success float-right my-3" routerLink='/user/newteam'><i class="fas fa-users"></i> New</button></span></h1>
       </div>
-
+      <div class="mycard p-4 mb-2">
+            <h1 class="display-4">People<span><button class="btn btn-success float-right my-3" routerLink='/user/people'><i class="fas fa-user-friends"></i> Invite</button></span></h1>
+            <div class="my-3">
+                        <table class="table table-borderless table-md text-center ">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Team Name</th>
+                                        <th scope="col">Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>mark@email.com</td>
+                                        <td>Dream team</td>
+                                        <td><button class="btn btn-danger">Remove</button></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>jacob@email.com</td>
+                                        <td>-</td>
+                                        <td><button class="btn btn-danger">Remove</button></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+            </div>
+      </div>
+      <!-- <div class="mycard p-4 mb-2">
+                  <h1 class="display-4">Account<span><button class="btn btn-success float-right my-3" routerLink='/user/newteam'><i class="fas fa-cog"></i> Change</button></span></h1>
+                  <div class="my-3 d-flex">
+                        <div class="left">
+                                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="..." class="img-thumbnail avatar-big">
+                        </div>
+                        <div class="right ml-3">
+                              <h1>User Name</h1>
+                        </div>
+                              
+                  </div>
+      </div> -->
 </div>

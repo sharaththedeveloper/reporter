@@ -1,3 +1,4 @@
+import { DashboardComponent } from './user/dashboard/dashboard.component';
 
 import { UserComponent } from './user/user.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,6 +10,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { NavComponent } from './user/nav/nav.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     WelcomeComponent,
     UserComponent,
-    NavComponent
+    NavComponent,
+    DashboardComponent
 
   ],
   
@@ -27,7 +30,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     // NgbModule
   ],
-  providers: [],
+  providers: [
+            {
+        provide: LocationStrategy,
+        useClass: HashLocationStrategy
+        }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

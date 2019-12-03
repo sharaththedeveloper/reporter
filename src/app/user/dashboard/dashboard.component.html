@@ -1,15 +1,14 @@
 <div class="dash">
   <div class="left">
-    <div class="navlist">
-      <a routerLink="/user/dashboard">
+    <div class="navlist" >
         <div class="navicon p-3">
-          <i class="fas fa-home"></i></div>
-      </a>
-      <a>
-        <div class="navicon p-3">
+          <i class="fas fa-home"(click)="sidenavigator('home')"></i>
+        </div>
+    
+        <div class="navicon p-3" [routerLink]="['bugs']">
           <i class="fas fa-bug"></i>
         </div>
-      </a>
+      
       <div class="navicon p-3">
         <i class="fas fa-chart-line"></i>
       </div>
@@ -22,7 +21,6 @@
     </div>
   </div>
     <div class="right">
-      
-
+      <router-outlet></router-outlet>
     </div>
   </div>
